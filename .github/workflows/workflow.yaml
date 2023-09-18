@@ -16,7 +16,9 @@ jobs:
 
       - name: Extract branch name
         id: extrach_branch_name
-        run: echo "${GITHUB_REF#refs/heads/}"
+        run: echo "${{ github.ref }}"
+        env:
+          GITHUB_REF : ${{ github.ref }}
 
       - name: Extract name of commit
         id: extract_name_of_commit
