@@ -3,7 +3,9 @@ name : Create Pull Request Template
 on : 
   [pull_request] :
     branches :
-        - '*'
+      - '*'
+    types :
+      - opened
 
 jobs :
   create_pull_request_template :
